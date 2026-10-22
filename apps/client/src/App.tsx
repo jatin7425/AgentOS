@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const controller = new AbortController()
-    fetch('/api/health', { signal: controller.signal })
+    fetch('/api/v1/health', { signal: controller.signal })
       .then(async (response) => {
         if (!response.ok) throw new Error('Health check failed')
         const data: Health = await response.json()

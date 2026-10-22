@@ -1,10 +1,36 @@
 services:
+  db:
+    image: pgvector/pgvector:0.8.6-pg17
+    environment:
+      POSTGRES_DB: agentos
+      POSTGRES_USER: agentos
+      POSTGRES_PASSWORD: agentos
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/01-vector.sql:ro
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "agentos", "-d", "agentos"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    restart: unless-stopped
+
   server:
     build: ./apps/server
+    environment:
+      DATABASE_URL: postgresql://agentos:agentos@db:5432/agentos
+      VECTOR_STORE_BACKEND: pgvector
+      VECTOR_DB_URL: postgresql://agentos:agentos@db:5432/agentos_vectors
+    depends_on:
+      db:
+        condition: service_healthy
     ports:
       - "8000:8000"
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=3)"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -19,8 +45,11 @@ services:
       server:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/health"]
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/healthz"]
       interval: 10s
       timeout: 5s
       retries: 5
     restart: unless-stopped
+
+volumes:
+  postgres_data:

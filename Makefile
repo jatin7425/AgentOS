@@ -3,11 +3,11 @@
 .PHONY: help up down build update-server logs logs-server status install dev-client dev-server build-client
 
 help:
-	@echo "make up             Build and start both Docker services"
-	@echo "make down           Stop both Docker services"
-	@echo "make build          Build both Docker images"
+	@echo "make up             Build and start all Docker services"
+	@echo "make down           Stop all Docker services"
+	@echo "make build          Build application Docker images"
 	@echo "make update-server  Rebuild and update only the backend in Docker"
-	@echo "make dev-server     Start or update the backend in Docker"
+	@echo "make dev-server     Start the backend and database in Docker"
 	@echo "make logs           Follow all Docker service logs"
 	@echo "make logs-server    Follow backend Docker logs"
 	@echo "make status         Show Docker service status"
@@ -27,7 +27,8 @@ build:
 update-server:
 	docker compose up --build -d --no-deps --wait server
 
-dev-server: update-server
+dev-server:
+	docker compose up --build -d --wait server
 
 logs:
 	docker compose logs -f

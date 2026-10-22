@@ -6,6 +6,8 @@ COPY requirements.lock.txt ./
 RUN pip install --no-cache-dir -r requirements.lock.txt
 RUN useradd --create-home appuser
 COPY api ./api
+COPY db ./db
+COPY config ./config
 USER appuser
 EXPOSE 8000
 CMD ["python", "-m", "uvicorn", "api.app:app", "--host", "0.0.0.0", "--port", "8000"]
