@@ -1,19 +1,4 @@
-# Secrets
-.env
-
-# Python
-__pycache__/
-*.pyc
 .venv/
-venv/
-.pytest_cache/
-
-# Editors / OS
-.vscode/
-.idea/
-.DS_Store
-
-# Frontend
-node_modules/
-dist/
-*.tsbuildinfo
+.env
+.setup_state
+__pycache__/

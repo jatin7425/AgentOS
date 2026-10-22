@@ -1,55 +1,84 @@
+name: agentos
+
 services:
   db:
-    image: pgvector/pgvector:0.8.6-pg17
-    environment:
-      POSTGRES_DB: agentos
-      POSTGRES_USER: agentos
-      POSTGRES_PASSWORD: agentos
-    ports:
-      - "127.0.0.1:5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/01-vector.sql:ro
-    healthcheck:
-      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "agentos", "-d", "agentos"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-      start_period: 10s
+    image: pgvector/pgvector:pg17
+    container_name: shop-db
     restart: unless-stopped
-
-  server:
-    build: ./apps/server
     environment:
-      DATABASE_URL: postgresql://agentos:agentos@db:5432/agentos
-      VECTOR_STORE_BACKEND: pgvector
-      VECTOR_DB_URL: postgresql://agentos:agentos@db:5432/agentos_vectors
+      POSTGRES_USER: ${DB_USER:-shop}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-shop}
+      POSTGRES_DB: ${DB_NAME:-shop}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    configs:
+      - source: init_sql
+        target: /docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-shop} -d ${DB_NAME:-shop}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  adminer:
+    image: adminer
+    profiles: ["tools"]          # only starts with --profile tools
+    ports:
+      - "8080:8080"
     depends_on:
       db:
         condition: service_healthy
-    ports:
-      - "8000:8000"
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=3)"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 10s
-    restart: unless-stopped
 
-  client:
-    build: ./apps/client
-    ports:
-      - "8080:80"
-    depends_on:
-      server:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/healthz"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    restart: unless-stopped
+configs:
+  init_sql:
+    content: |
+      -- ============ Relational DB: ${DB_NAME:-shop} ============
+      CREATE TABLE products (
+          id    SERIAL PRIMARY KEY,
+          name  TEXT NOT NULL,
+          price NUMERIC(10,2) NOT NULL
+      );
+
+      CREATE TABLE customers (
+          id    SERIAL PRIMARY KEY,
+          name  TEXT NOT NULL,
+          city  TEXT
+      );
+
+      CREATE TABLE orders (
+          id          SERIAL PRIMARY KEY,
+          customer_id INT REFERENCES customers(id),
+          product_id  INT REFERENCES products(id),
+          quantity    INT NOT NULL,
+          order_date  DATE NOT NULL
+      );
+
+      INSERT INTO products (name, price) VALUES
+        ('Wireless Mouse', 799), ('Keyboard', 1499),
+        ('USB-C Hub', 2199), ('Laptop Stand', 1299);
+
+      INSERT INTO customers (name, city) VALUES
+        ('Rahul Mehta', 'Surat'), ('Priya Shah', 'Ahmedabad'), ('Amit Patel', 'Valsad');
+
+      INSERT INTO orders (customer_id, product_id, quantity, order_date) VALUES
+        (1, 1, 2, '2026-10-01'), (2, 2, 1, '2026-10-03'),
+        (3, 3, 4, '2026-10-10'), (1, 4, 1, '2026-10-12'),
+        (2, 1, 5, '2026-10-15');
+
+      -- Read-only user for the agent's SQL tool
+      CREATE ROLE ${DB_RO_USER:-agent_ro} LOGIN PASSWORD '${DB_RO_PASSWORD:-agent_ro}';
+      GRANT CONNECT ON DATABASE ${DB_NAME:-shop} TO ${DB_RO_USER:-agent_ro};
+      GRANT USAGE ON SCHEMA public TO ${DB_RO_USER:-agent_ro};
+      GRANT SELECT ON ALL TABLES IN SCHEMA public TO ${DB_RO_USER:-agent_ro};
+      ALTER DEFAULT PRIVILEGES IN SCHEMA public
+        GRANT SELECT ON TABLES TO ${DB_RO_USER:-agent_ro};
+
+      -- ============ Vector DB: ${VECTOR_DB_NAME:-vectors} ============
+      CREATE DATABASE ${VECTOR_DB_NAME:-vectors};
+      \c ${VECTOR_DB_NAME:-vectors}
+      CREATE EXTENSION IF NOT EXISTS vector;
 
 volumes:
-  postgres_data:
+  pgdata:

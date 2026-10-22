@@ -1,0 +1,12 @@
+sqlalchemy
+psycopg[binary]
+python-dotenv
+langchain
+langchain-openai
+langchain-postgres
+langchain-tavily
+langgraph
+langgraph-checkpoint-postgres
+pypdf
+fastapi
+uvicorn
