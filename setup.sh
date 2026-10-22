@@ -131,6 +131,13 @@ if [[ ! -f "$ENV_FILE" && -f "$PROJECT_DIR/.env.example" ]]; then
   ok "Created .env with local Docker database settings"
 fi
 
+# Maintain the host-facing URL used by SDKs and LangChain in the shared .env.
+if ! grep -Eq '^(export )?CLI_API_BASE_URL=' "$ENV_FILE"; then
+  api_port="$(read_env | awk -F '\t' '$1 == "CLI_API_PORT" {print $2; exit}')"
+  printf '\nCLI_API_BASE_URL=http://localhost:%s/v1\n' "${api_port:-8088}" >> "$ENV_FILE"
+  ok "Configured CLI_API_BASE_URL in .env"
+fi
+
 # ---------- find Python -------------------------------------------------------
 find_python() {
   local candidates=(python3 python)
@@ -217,7 +224,7 @@ fi
 if [[ "$RUN_DOCKER" == "1" ]]; then
   command -v docker >/dev/null 2>&1 || die "docker not found. Install Docker or use --no-docker."
   info "Starting docker compose"
-  (cd "$PROJECT_DIR" && docker compose up -d)
+  (cd "$PROJECT_DIR" && docker compose up -d --build)
 
   info "Waiting for $DB_CONTAINER to be healthy"
   for _ in $(seq 1 30); do
@@ -227,6 +234,16 @@ if [[ "$RUN_DOCKER" == "1" ]]; then
   done
   [[ "${status:-}" == "healthy" ]] || die "Database did not become healthy. Check: docker logs $DB_CONTAINER"
   ok "Database is healthy"
+
+  info "Waiting for CLI API to be healthy"
+  api_container="$(cd "$PROJECT_DIR" && docker compose ps -q cli-api)"
+  for _ in $(seq 1 30); do
+    api_status="$(docker inspect -f '{{.State.Health.Status}}' "$api_container" 2>/dev/null || echo starting)"
+    [[ "$api_status" == "healthy" ]] && break
+    sleep 2
+  done
+  [[ "${api_status:-}" == "healthy" ]] || die "CLI API did not become healthy. Check: docker compose logs cli-api"
+  ok "CLI API is healthy (see CLI_API_BASE_URL in .env)"
 
   # ---------- utility health checks -------------------------------------------
   cd "$PROJECT_DIR"
