@@ -1,47 +1,6 @@
 name: agentos
 
 services:
-  cli-api:
-    build:
-      context: ./cli_api
-    restart: unless-stopped
-    init: true
-    env_file:
-      - .env
-    ports:
-      - "127.0.0.1:${CLI_API_PORT:-8088}:8088"
-    volumes:
-      - type: bind
-        source: ${CLI_CLAUDE_AUTH_DIR:-${HOME}/.claude}
-        target: /host-auth/claude
-        read_only: true
-        bind:
-          create_host_path: true
-      - type: bind
-        source: ${CLI_CODEX_AUTH_DIR:-${HOME}/.codex}
-        target: /host-auth/codex
-        read_only: true
-        bind:
-          create_host_path: true
-      - type: bind
-        source: ${CLI_API_ANTIGRAVITY_BINARY:-${HOME}/.local/bin/agy}
-        target: /usr/local/bin/agy
-        read_only: true
-        bind:
-          create_host_path: true
-      - type: bind
-        source: ${CLI_API_ANTIGRAVITY_AUTH_DIR:-${HOME}/.gemini/antigravity-cli}
-        target: /host-auth/antigravity
-        read_only: true
-        bind:
-          create_host_path: true
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8088/health', timeout=3)"]
-      interval: 10s
-      timeout: 5s
-      start_period: 20s
-      retries: 5
-
   db:
     image: pgvector/pgvector:pg17
     container_name: shop-db

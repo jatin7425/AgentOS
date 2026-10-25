@@ -8,5 +8,3 @@ langchain-tavily
 langgraph
 langgraph-checkpoint-postgres
 pypdf
-fastapi
-uvicorn
