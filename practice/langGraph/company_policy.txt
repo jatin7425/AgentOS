@@ -1,0 +1,681 @@
+# QuantumCloud Technologies Inc.
+## Employee Handbook & Workplace Policies
+
+**Document Version:** 1.0  
+**Department:** Human Resources & People Operations  
+**Document Classification:** Internal — Employee Reference  
+**Effective Date:** To Be Determined  
+**Policy Owner:** Human Resources Department
+
+---
+
+# 1. Introduction
+
+## 1.1 Welcome to QuantumCloud Technologies Inc.
+
+Welcome to QuantumCloud Technologies Inc., an innovative technology organization dedicated to delivering modern cloud computing, software engineering, artificial intelligence, and enterprise technology solutions.
+
+At QuantumCloud, we believe that our greatest strength lies in our employees. We are committed to building an environment where individuals can develop their professional skills, collaborate with talented colleagues, maintain a healthy work-life balance, and contribute meaningfully to the organization's success.
+
+This handbook provides employees with a centralized reference for workplace expectations, organizational policies, employee benefits, and operational procedures.
+
+## 1.2 Purpose of This Handbook
+
+The primary objectives of this handbook are to:
+
+- Communicate organizational expectations and workplace standards.
+- Explain employee benefits and leave entitlements.
+- Establish consistent guidelines for remote and in-office work.
+- Promote a respectful, inclusive, and productive work environment.
+- Clarify employee responsibilities regarding company resources and information.
+- Provide guidance on accessing HR support.
+
+All employees are encouraged to review this handbook carefully and consult Human Resources whenever clarification is required.
+
+## 1.3 Scope and Applicability
+
+This handbook is intended for employees of QuantumCloud Technologies Inc.
+
+Certain benefits, including the annual learning stipend, apply specifically to full-time employees. Other provisions may depend on an employee's role, location, employment agreement, or applicable legal requirements.
+
+Where local employment law or a signed employment agreement provides a different entitlement, the applicable legal or contractual requirement will govern.
+
+---
+
+# 2. Company Values and Workplace Culture
+
+## 2.1 Innovation and Continuous Improvement
+
+QuantumCloud encourages employees to explore new technologies, improve existing processes, and identify creative solutions to complex problems.
+
+Employees are encouraged to share ideas, contribute to technical discussions, and participate in continuous improvement initiatives.
+
+## 2.2 Collaboration and Teamwork
+
+Effective collaboration is essential to delivering high-quality technology solutions.
+
+Team members should communicate openly, document important decisions, and maintain professional relationships across departments.
+
+The organization recognizes that meaningful collaboration can occur both remotely and in person.
+
+## 2.3 Accountability and Ownership
+
+Employees are expected to take responsibility for their assigned work, communicate progress accurately, and raise potential risks or blockers promptly.
+
+Accountability involves not only completing tasks but also maintaining transparency and supporting the success of the wider team.
+
+## 2.4 Respect and Inclusion
+
+QuantumCloud aims to provide a workplace where individuals are treated fairly and respectfully.
+
+Harassment, bullying, discrimination, intimidation, and retaliation are inconsistent with the company's expected standards of conduct.
+
+Employees should report workplace concerns to Human Resources or an appropriate manager.
+
+---
+
+# 3. Remote Work and Hybrid Workplace Policy
+
+## 3.1 Policy Overview
+
+QuantumCloud Technologies Inc. supports a hybrid working model that balances employee flexibility with in-person collaboration.
+
+**All engineers are allowed to work remotely three days per week.**
+
+The organization recognizes that engineering tasks frequently require focused individual work, while team discussions, planning sessions, and collaborative problem-solving can benefit from in-person interaction.
+
+## 3.2 Designated In-Office Collaboration Days
+
+**Tuesdays and Thursdays are designated in-office collaboration days.**
+
+Engineers are expected to attend the office on these two days to participate in collaborative activities, including:
+
+- Engineering team meetings and sprint planning.
+- Architecture reviews and technical design discussions.
+- Cross-functional coordination.
+- Knowledge-sharing sessions and technical workshops.
+- Project planning and retrospective meetings.
+- Team-building and professional development activities.
+
+## 3.3 Remote Work Schedule
+
+Under the standard weekly arrangement:
+
+| Day | Work Arrangement |
+|---|---|
+| Monday | Remote |
+| Tuesday | In Office |
+| Wednesday | Remote |
+| Thursday | In Office |
+| Friday | Remote |
+
+This schedule reflects the standard hybrid arrangement for engineers.
+
+## 3.4 Remote Work Responsibilities
+
+Employees working remotely should maintain a professional and productive working environment.
+
+Recommended expectations include:
+
+1. Maintaining reliable internet connectivity.
+2. Being available for scheduled meetings and agreed working hours.
+3. Responding to work-related communications within reasonable timeframes.
+4. Protecting company information from unauthorized access.
+5. Keeping project management systems updated.
+6. Attending required virtual meetings.
+7. Communicating technical blockers and project risks promptly.
+
+Remote work should not reduce the quality of communication, accountability, or project delivery.
+
+## 3.5 Home Workspace and Equipment
+
+Employees should establish a workspace suitable for professional activities.
+
+The workspace should provide adequate lighting, reasonable privacy, and sufficient security for company devices and confidential information.
+
+Employees are encouraged to follow ergonomic best practices, including using an appropriate chair, maintaining suitable screen positioning, and taking regular breaks.
+
+Company-issued devices and equipment must be handled responsibly.
+
+## 3.6 Exceptions and Special Arrangements
+
+Employees who need an exception to the normal hybrid schedule because of illness, accessibility needs, emergencies, or other circumstances should contact their manager and Human Resources.
+
+Any exception process should be documented and applied consistently, taking account of applicable law and individual circumstances.
+
+---
+
+# 4. Office Attendance and Collaboration
+
+## 4.1 Purpose of Office Collaboration Days
+
+The primary purpose of mandatory collaboration days is to strengthen teamwork and improve communication.
+
+Tuesdays and Thursdays should be used effectively for activities that benefit from direct interaction.
+
+## 4.2 Meeting Expectations
+
+Employees should arrive prepared for scheduled meetings, participate constructively, and respect the time of colleagues.
+
+Meeting organizers are encouraged to establish agendas and record important decisions and action items.
+
+## 4.3 Shared Workspaces
+
+Employees should maintain clean and organized workspaces.
+
+Shared meeting rooms, collaboration areas, and office equipment should be used responsibly.
+
+Employees should respect noise levels and avoid disrupting colleagues engaged in focused work.
+
+## 4.4 Visitors and Office Access
+
+For security purposes, visitors should follow company reception and identification procedures.
+
+Employees should not provide unauthorized individuals with access to restricted workspaces, devices, or confidential information.
+
+---
+
+# 5. Pet-Friendly Workplace Policy
+
+## 5.1 Friendly Dogs Welcome
+
+QuantumCloud Technologies Inc. maintains a strict **"Friendly Dogs Welcome"** policy.
+
+The company recognizes that allowing suitable dogs in the workplace can contribute to a welcoming office atmosphere and improve the employee experience.
+
+However, pet access must be balanced with employee safety, hygiene, accessibility, and comfort.
+
+## 5.2 Registration Requirements
+
+**All dogs must be registered with Human Resources before being brought into the office.**
+
+Employees should contact HR to complete the required registration process.
+
+Suggested registration information includes:
+
+- Dog's name and breed.
+- Dog's age.
+- Owner's name and department.
+- Emergency contact information.
+- Vaccination documentation.
+- Relevant behavioral or health considerations.
+
+HR may establish additional administrative procedures to support safe office access.
+
+## 5.3 Vaccination Requirements
+
+**All dogs entering the QuantumCloud office must be fully vaccinated.**
+
+Employees are responsible for ensuring that their dogs' vaccinations remain current.
+
+HR may request appropriate documentation confirming vaccination status.
+
+Dogs that do not meet vaccination requirements are not permitted in the office.
+
+## 5.4 Animal Behavior and Supervision
+
+The Friendly Dogs Welcome policy is intended for dogs that can behave safely around employees and other animals.
+
+Recommended owner responsibilities include:
+
+1. Supervising their dogs at all times.
+2. Preventing aggressive or disruptive behavior.
+3. Cleaning up after their dogs.
+4. Maintaining appropriate hygiene.
+5. Keeping dogs away from restricted areas.
+6. Respecting employees who are uncomfortable around dogs.
+
+Employees remain responsible for the behavior and welfare of their dogs while on company premises.
+
+## 5.5 Animals Not Permitted
+
+**Cats and reptiles are currently not permitted in the office.**
+
+This restriction applies regardless of whether an animal is domesticated, vaccinated, or accustomed to human interaction.
+
+Any legally required accommodation involving assistance animals should be handled separately by Human Resources in accordance with applicable law.
+
+## 5.6 Employee Comfort and Safety
+
+Employees who have allergies, phobias, or other concerns regarding dogs should contact Human Resources.
+
+The organization should make reasonable efforts to address concerns while maintaining a safe and inclusive workplace.
+
+---
+
+# 6. Annual Leave and Paid Time Off
+
+## 6.1 Annual PTO Entitlement
+
+**Employees receive 25 days of paid time off (PTO) annually.**
+
+PTO is intended to allow employees to rest, travel, manage personal responsibilities, and maintain a healthy balance between professional and personal commitments.
+
+Employees are encouraged to use their available leave throughout the year.
+
+## 6.2 PTO Planning and Requests
+
+Employees should coordinate planned absences with their managers to reduce disruptions to business operations.
+
+A recommended leave request process includes:
+
+1. Reviewing the available PTO balance.
+2. Identifying preferred leave dates.
+3. Submitting a request through the designated HR system.
+4. Allowing the manager to review scheduling requirements.
+5. Receiving confirmation of the leave request.
+6. Preparing a handover for ongoing responsibilities.
+
+The specific approval workflow and notice periods should be confirmed by Human Resources.
+
+## 6.3 PTO Carryover Policy
+
+**Employees may roll over up to five unused PTO days into the following calendar year.**
+
+For example:
+
+| Unused PTO at Year-End | Maximum Carryover |
+|---|---|
+| 2 days | 2 days |
+| 5 days | 5 days |
+| 8 days | 5 days |
+| 12 days | 5 days |
+
+Unused days above the five-day carryover limit are subject to the company's applicable leave administration rules and local legal requirements.
+
+## 6.4 Illustrative PTO Calculation
+
+Consider an employee with an annual entitlement of 25 days.
+
+If the employee uses 18 days during the year, the remaining balance is seven days.
+
+Under the carryover policy, the employee may carry forward five days.
+
+Assuming the employee receives a full 25-day entitlement in the following year, the employee would begin with 30 available days, subject to any applicable carryover usage deadlines.
+
+## 6.5 Leave During Critical Projects
+
+Employees should communicate planned leave early when working on projects with important delivery deadlines.
+
+Managers should plan resource allocation appropriately and avoid unnecessary barriers to employees using their PTO entitlement.
+
+## 6.6 Emergency Absences
+
+Employees experiencing unexpected personal circumstances should notify their manager as soon as reasonably possible.
+
+Human Resources should provide guidance regarding the appropriate leave category and documentation requirements.
+
+---
+
+# 7. Learning and Professional Development Benefits
+
+## 7.1 Annual Learning Stipend
+
+QuantumCloud Technologies Inc. supports continuous learning and career development.
+
+**Every full-time employee receives an annual $1,500 learning stipend.**
+
+This benefit is intended to help employees develop new skills, expand their professional knowledge, and remain current with developments in the technology industry.
+
+## 7.2 Eligible Learning Expenses
+
+The stipend may be used for:
+
+- Books.
+- Conferences.
+- Courses.
+
+These categories may support professional development in fields such as software engineering, cloud computing, artificial intelligence, cybersecurity, data engineering, leadership, and project management.
+
+## 7.3 Illustrative Learning Budget
+
+An employee might allocate the annual stipend as follows:
+
+| Learning Activity | Example Expense |
+|---|---:|
+| Cloud architecture course | $450 |
+| Technical conference | $600 |
+| Professional books | $150 |
+| Advanced programming course | $300 |
+| **Total** | **$1,500** |
+
+This example illustrates one possible allocation of the benefit and does not establish additional eligibility rules.
+
+## 7.4 Learning Expense Administration
+
+Human Resources and Finance should publish clear procedures for using the stipend.
+
+These procedures should explain whether expenses require advance approval, how employees submit receipts, when reimbursements are processed, and whether unused stipend balances expire.
+
+Until these details are formally established, employees should confirm the applicable process before incurring expenses.
+
+## 7.5 Knowledge Sharing
+
+Employees are encouraged to share useful knowledge gained through professional development.
+
+Examples include presenting lessons from conferences, conducting internal workshops, writing technical documentation, or mentoring colleagues.
+
+Knowledge sharing strengthens organizational capabilities and increases the long-term value of learning investments.
+
+---
+
+# 8. Information Security and Confidentiality
+
+## 8.1 Employee Responsibilities
+
+All employees are responsible for protecting company information, customer information, intellectual property, and internal systems.
+
+Confidential information must be accessed and used only for legitimate business purposes.
+
+## 8.2 Password and Authentication Security
+
+Recommended security practices include:
+
+- Using strong and unique passwords.
+- Enabling multi-factor authentication where supported.
+- Avoiding password sharing.
+- Locking devices when unattended.
+- Reporting suspicious login activity.
+- Using company-approved password management solutions.
+
+## 8.3 Remote Work Security
+
+Remote employees should exercise particular care when accessing company systems outside the office.
+
+Employees should avoid exposing sensitive information on shared screens or in public locations.
+
+Company-approved security tools and secure network connections should be used whenever required by IT.
+
+## 8.4 Data Classification and Handling
+
+Company information may include public, internal, confidential, and restricted material.
+
+Employees should follow applicable classification requirements when storing, transmitting, or sharing information.
+
+Sensitive company data should not be uploaded to unapproved external platforms or personal accounts.
+
+## 8.5 Security Incident Reporting
+
+Employees should report suspected security incidents promptly through the designated IT or security reporting channel.
+
+Examples include lost company devices, phishing attempts, unauthorized access, accidental data exposure, or suspicious system activity.
+
+---
+
+# 9. Professional Conduct and Workplace Ethics
+
+## 9.1 General Conduct
+
+Employees are expected to act professionally and ethically in all business interactions.
+
+Professional conduct includes honesty, reliability, respectful communication, and responsible use of organizational resources.
+
+## 9.2 Anti-Harassment Expectations
+
+QuantumCloud aims to maintain a workplace free from harassment, discrimination, intimidation, and retaliation.
+
+Employees who experience or witness inappropriate conduct should have access to a confidential reporting process, subject to the limits necessary for a fair investigation.
+
+## 9.3 Conflicts of Interest
+
+Employees should disclose circumstances in which personal, financial, or outside professional interests may conflict with their responsibilities to QuantumCloud.
+
+Potential conflicts should be reviewed by the appropriate company representative.
+
+## 9.4 Responsible Use of Company Resources
+
+Company equipment, software, accounts, facilities, and communication systems should be used responsibly.
+
+Employees should not install unauthorized software, share access credentials, or misuse company resources.
+
+---
+
+# 10. Employee Performance and Career Growth
+
+## 10.1 Performance Expectations
+
+Performance should be evaluated using role-appropriate objectives and clearly communicated expectations.
+
+Potential evaluation areas include quality of work, reliability, collaboration, problem-solving, technical development, and project delivery.
+
+## 10.2 Feedback and Development
+
+Managers are encouraged to provide regular, constructive feedback.
+
+Employees should have opportunities to discuss achievements, challenges, development goals, and career aspirations.
+
+## 10.3 Career Development
+
+QuantumCloud encourages employees to pursue professional growth through technical specialization, leadership development, mentoring, and relevant learning opportunities.
+
+The annual learning stipend can support these goals.
+
+## 10.4 Performance Improvement
+
+Where performance concerns arise, managers should communicate expectations clearly and provide reasonable opportunities for improvement.
+
+Any formal performance improvement process should be consistent, documented, and administered fairly.
+
+---
+
+# 11. Communication and Team Collaboration
+
+## 11.1 Communication Standards
+
+Employees should use approved company communication channels for work-related activities.
+
+Important project decisions should be documented so that team members can access accurate information.
+
+## 11.2 Hybrid Team Communication
+
+Teams should avoid creating information gaps between remote and in-office employees.
+
+Meeting notes, technical decisions, project updates, and action items should be accessible to authorized team members regardless of their working location.
+
+## 11.3 Respectful Communication
+
+Employees should communicate professionally in email, chat, video meetings, and face-to-face discussions.
+
+Disagreements should focus on ideas, evidence, and constructive problem-solving rather than personal criticism.
+
+---
+
+# 12. Health, Safety, and Employee Well-Being
+
+## 12.1 Workplace Safety
+
+Employees are expected to follow reasonable workplace safety procedures and report hazards promptly.
+
+Office facilities should be maintained to support safe and comfortable working conditions.
+
+## 12.2 Mental Health and Well-Being
+
+QuantumCloud recognizes the importance of employee well-being.
+
+Managers are encouraged to support realistic workloads, respectful communication, and sustainable working practices.
+
+Employees experiencing work-related concerns should be able to seek guidance from Human Resources.
+
+## 12.3 Ergonomics
+
+Employees working from home or in the office are encouraged to follow ergonomic practices, including appropriate seating, screen placement, and regular movement.
+
+## 12.4 Emergency Procedures
+
+Employees should familiarize themselves with office emergency exits, evacuation routes, and designated emergency contacts.
+
+Emergency instructions should be made accessible to employees and visitors.
+
+---
+
+# 13. Human Resources Support and Policy Administration
+
+## 13.1 HR Responsibilities
+
+The Human Resources Department is responsible for supporting employees and administering applicable workplace policies.
+
+HR responsibilities may include:
+
+- Maintaining employee records.
+- Supporting leave administration.
+- Managing dog registration requirements.
+- Coordinating employee benefit information.
+- Assisting with workplace concerns.
+- Providing policy clarification.
+- Supporting employee onboarding and offboarding.
+
+## 13.2 Employee Questions and Requests
+
+Employees should contact HR for questions involving PTO balances, carryover eligibility, learning stipend procedures, pet registration, or workplace accommodations.
+
+## 13.3 Policy Updates
+
+QuantumCloud may review and revise its workplace policies to reflect operational needs, legal requirements, and employee feedback.
+
+Material changes should be communicated through official company channels.
+
+## 13.4 Recordkeeping
+
+Employee records and HR documentation should be maintained securely and accessed only by authorized personnel.
+
+The organization should establish appropriate retention periods and privacy protections in accordance with applicable law.
+
+---
+
+# 14. Frequently Asked Questions
+
+### Q1. How many days per week can engineers work remotely?
+
+Engineers are allowed to work remotely three days per week.
+
+### Q2. Which days are mandatory in-office days?
+
+Tuesdays and Thursdays are designated in-office collaboration days.
+
+### Q3. Can engineers work remotely on Mondays, Wednesdays, and Fridays?
+
+Yes. Those are the three remote days under the standard engineering hybrid schedule.
+
+### Q4. Are dogs allowed in the office?
+
+Yes. QuantumCloud maintains a Friendly Dogs Welcome policy.
+
+### Q5. Can an employee bring an unregistered dog into the office?
+
+No. Dogs must be registered with Human Resources.
+
+### Q6. Do dogs need to be vaccinated?
+
+Yes. All dogs brought into the office must be fully vaccinated.
+
+### Q7. Are cats permitted?
+
+No. Cats are currently not permitted in the office.
+
+### Q8. Are reptiles permitted?
+
+No. Reptiles are currently not permitted in the office.
+
+### Q9. How many annual paid leave days do employees receive?
+
+Employees receive 25 days of paid time off annually.
+
+### Q10. How many unused PTO days can be carried into the next year?
+
+A maximum of five unused PTO days may be rolled over.
+
+### Q11. What happens if an employee has eight unused PTO days?
+
+Five days may be carried over. Treatment of the remaining three days depends on applicable leave rules and legal requirements.
+
+### Q12. Does QuantumCloud provide a professional development allowance?
+
+Yes. Every full-time employee receives an annual $1,500 learning stipend.
+
+### Q13. Can the learning stipend be used for books?
+
+Yes. Books are an eligible category.
+
+### Q14. Can the stipend be used for conferences?
+
+Yes. Conferences are included in the learning stipend benefit.
+
+### Q15. Can employees use the stipend for online courses?
+
+Yes. Courses are an eligible category. Specific purchasing and reimbursement procedures should be confirmed with HR.
+
+### Q16. Do part-time employees receive the $1,500 learning stipend?
+
+The stated policy guarantees this stipend to full-time employees. Eligibility for other employment categories has not been specified.
+
+### Q17. Can an employee bring a dog on an in-office collaboration day?
+
+Yes, provided the dog meets the registration and vaccination requirements and complies with applicable office procedures.
+
+### Q18. Can employees request exceptions to the hybrid schedule?
+
+Employees should discuss individual circumstances with their manager and HR. The specific exception and approval process has not yet been defined.
+
+---
+
+# 15. Quick Policy Reference
+
+| Policy Category | QuantumCloud Policy |
+|---|---|
+| Company | QuantumCloud Technologies Inc. |
+| Work Arrangement | Hybrid for engineers |
+| Remote Work | 3 days per week |
+| In-Office Days | Tuesday and Thursday |
+| Pet Policy | Friendly Dogs Welcome |
+| Dog Registration | Mandatory with HR |
+| Dog Vaccination | Fully vaccinated |
+| Cats in Office | Not permitted |
+| Reptiles in Office | Not permitted |
+| Annual Paid Time Off | 25 days |
+| Maximum PTO Carryover | 5 days |
+| Annual Learning Stipend | $1,500 |
+| Stipend Eligibility | Full-time employees |
+| Stipend Uses | Books, conferences, courses |
+
+---
+
+# 16. Employee Acknowledgment
+
+Employees should review this handbook and seek clarification about any provisions they do not understand.
+
+By acknowledging receipt, an employee confirms that they have received access to the handbook and understand their responsibility to follow applicable company policies.
+
+Acknowledgment does not replace an employment agreement, modify statutory employment rights, or establish additional contractual terms unless expressly provided by applicable law or agreement.
+
+**Employee Name:** __________________________
+
+**Employee ID:** _____________________________
+
+**Department:** ______________________________
+
+**Employee Signature:** _______________________
+
+**Date:** ____________________________________
+
+---
+
+# 17. Document Control and Approval
+
+| Field | Details |
+|---|---|
+| Document Title | Employee Handbook & Workplace Policies |
+| Organization | QuantumCloud Technologies Inc. |
+| Version | 1.0 |
+| Document Owner | Human Resources |
+| Review Frequency | To Be Determined |
+| Effective Date | To Be Determined |
+| Approval Authority | To Be Determined |
+| Status | Draft — Pending HR Review |
+
+**Important:** Sections expanding beyond the supplied remote work, pet, PTO, and learning stipend policies are proposed handbook content. They should be reviewed and approved by QuantumCloud's HR and legal teams before being represented as official company policy.
+
+---
+
+**End of Document**
+
+© QuantumCloud Technologies Inc. — Employee Handbook & Workplace Policies.

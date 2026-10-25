@@ -3,8 +3,11 @@ psycopg[binary]
 python-dotenv
 langchain
 langchain-openai
+langchain-google-genai
 langchain-postgres
 langchain-tavily
 langgraph
 langgraph-checkpoint-postgres
+langchain_community
 pypdf
+jinja2
