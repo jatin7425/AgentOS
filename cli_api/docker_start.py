@@ -7,6 +7,12 @@ def copy_credentials():
     for source, destination in (
         ('/host-auth/claude/.credentials.json', Path.home() / '.claude/.credentials.json'),
         ('/host-auth/codex/auth.json', Path.home() / '.codex/auth.json'),
+        ('/host-auth/antigravity/antigravity-oauth-token',
+         Path.home() / '.gemini/antigravity-cli/antigravity-oauth-token'),
+        ('/host-auth/antigravity/installation_id',
+         Path.home() / '.gemini/antigravity-cli/installation_id'),
+        ('/host-auth/antigravity/settings.json',
+         Path.home() / '.gemini/antigravity-cli/settings.json'),
     ):
         origin = Path(source)
         if origin.is_file():

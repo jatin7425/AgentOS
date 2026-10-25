@@ -77,17 +77,16 @@ class ChatRequest(BaseModel):
 def providers():
     result = {}
     for name in ('claude', 'codex', 'antigravity'):
-        path = shutil.which(name)
-        wrapper = os.getenv('CLI_API_ANTIGRAVITY_COMMAND') if name == 'antigravity' else None
-        ready = bool(path) and name != 'antigravity'
+        path = shutil.which('agy') if name == 'antigravity' else shutil.which(name)
+        ready = bool(path)
         reason = None if ready else 'CLI not found on PATH.'
-        if name == 'antigravity' and path:
-            reason = 'Installed editor CLI has no headless stdout response mode; configure CLI_API_ANTIGRAVITY_COMMAND.'
+        wrapper = os.getenv('CLI_API_ANTIGRAVITY_COMMAND') if name == 'antigravity' else None
         if wrapper:
             try:
                 args = json.loads(wrapper)
-                ready = bool(isinstance(args, list) and args and all(isinstance(a, str) for a in args)
-                             and shutil.which(args[0]))
+                ready = bool(
+                    isinstance(args, list) and args and all(isinstance(a, str) for a in args)
+                    and shutil.which(args[0]))
             except (ValueError, TypeError):
                 ready = False
             reason = None if ready else 'Invalid or unavailable Antigravity wrapper command.'
@@ -105,7 +104,10 @@ def command(provider, model, workdir):
         args = [path, 'exec', '--sandbox', 'read-only', '--skip-git-repo-check',
                 '--ephemeral', '--color', 'never', '-o', str(workdir / 'answer.txt')]
     else:
-        args = json.loads(os.environ['CLI_API_ANTIGRAVITY_COMMAND'])
+        wrapper = os.getenv('CLI_API_ANTIGRAVITY_COMMAND')
+        args = json.loads(wrapper) if wrapper else [
+            path, '--print', '--input-format', 'text', '--output-format', 'text',
+            '--sandbox', '--disable-slash-commands']
     if model:
         if provider == 'antigravity':
             raise APIError(400, 'Antigravity wrapper uses its configured default model.')

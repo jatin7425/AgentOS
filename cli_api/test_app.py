@@ -47,7 +47,8 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(response.status_code, 400)
 
     async def test_detection_and_fallback(self):
-        with patch.object(gateway.shutil, 'which', return_value='/bin/fake'):
+        with patch.object(gateway.shutil, 'which',
+                          side_effect=lambda name: '/bin/fake' if name in ('claude', 'codex') else None):
             self.assertFalse(gateway.providers()['antigravity']['available'])
             with patch.object(gateway, 'execute', AsyncMock(side_effect=[
                 gateway.APIError(502, 'failed'), 'fallback answer'])) as execute:
@@ -57,6 +58,18 @@ class GatewayTests(unittest.IsolatedAsyncioTestCase):
             with patch.object(gateway, 'execute', AsyncMock(return_value='ok')) as execute:
                 await gateway.route('cx/test-model', 'hello')
                 execute.assert_awaited_once_with('codex', 'test-model', 'hello')
+
+    async def test_antigravity_uses_host_agy_cli(self):
+        with patch.object(gateway.shutil, 'which',
+                          side_effect=lambda name: '/usr/local/bin/agy' if name == 'agy' else None):
+            info = gateway.providers()['antigravity']
+            self.assertTrue(info['installed'])
+            self.assertTrue(info['available'])
+            self.assertIsNone(info['reason'])
+            self.assertEqual(
+                gateway.command('antigravity', None, Path('/tmp')),
+                ['/usr/local/bin/agy', '--print', '--input-format', 'text',
+                 '--output-format', 'text', '--sandbox', '--disable-slash-commands'])
 
     async def test_real_subprocess_stdin_and_codex_output(self):
         # Exercise real process I/O with a local fake CLI; no provider requests.

@@ -21,15 +21,20 @@ Change `CLI_API_PORT` before setup to use another host port. When changing it la
 update `CLI_API_BASE_URL` too. From another Compose service use
 `http://cli-api:8088/v1` instead of localhost.
 
-The image installs Claude Code and Codex. Detection checks the container's PATH,
-not the host PATH. Existing Linux logins in `~/.claude/.credentials.json` and
-`~/.codex/auth.json` are copied at startup from read-only mounts into the container's
-writable home. The host's configuration, hooks, MCP servers, and history are not
-copied. Login on the host first, then restart the service after renewing credentials.
+The image installs Claude Code and Codex. Compose also mounts the host's
+`~/.local/bin/agy` executable and `~/.gemini/antigravity-cli` auth directory
+read-only into the container, so Antigravity can be used without installing it
+in the image. Override `CLI_API_ANTIGRAVITY_BINARY` and
+`CLI_API_ANTIGRAVITY_AUTH_DIR` in root `.env` if those paths differ. Detection
+checks the container's PATH. Existing Linux logins in `~/.claude/.credentials.json`,
+`~/.codex/auth.json`, and Antigravity's OAuth token are copied at startup from
+read-only mounts into the container's writable home. The host's other configuration,
+hooks, MCP servers, and history are not copied. Compose creates missing host auth
+directories as empty directories; login on the host first, then restart the service
+after renewing credentials.
 Alternatively pass `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` through the root `.env`.
-Keychain-only login is not copied. Both host auth directories must exist for the
-default Compose mounts; override `CLI_CLAUDE_AUTH_DIR` / `CLI_CODEX_AUTH_DIR` with
-existing directories (an empty directory is fine for an unused provider).
+Keychain-only login is not copied. Override `CLI_CLAUDE_AUTH_DIR` /
+`CLI_CODEX_AUTH_DIR` to use different host directories.
 
 API docs: http://localhost:8088/docs
 
@@ -52,7 +57,7 @@ The published Docker port is bound to localhost.
 | `claude/sonnet` or `cc/sonnet` | Explicit Claude model |
 | `codex` or `cx` | Codex default model |
 | `codex/model-name` or `cx/model-name` | Explicit Codex model |
-| `antigravity` or `ag` | Configured headless wrapper |
+| `antigravity` or `ag` | Antigravity `agy` print mode, or configured wrapper |
 | `auto` | Try `CLI_API_FALLBACK` in order |
 
 Fallback defaults to `claude,codex,antigravity`; unavailable CLIs and execution errors
@@ -60,13 +65,22 @@ advance to the next candidate. Explicit provider requests never silently switch.
 Responses report the selected model. Installed does not mean authenticated:
 `/providers` reports executable detection, and a completion verifies actual access.
 
-Antigravity's installed editor CLI opens chat in the IDE; its help exposes no
-headless response output. It is reported unavailable for completions until you
-supply a wrapper. Set `CLI_API_ANTIGRAVITY_COMMAND` in root `.env` to a JSON argv
-array. The command reads the prompt from stdin and writes only the final answer to
-stdout. It must exist **inside the container**; extend the image or mount your
-wrapper and its dependencies. The base image does not install the Antigravity IDE.
-No GUI scraping, credential extraction, or private API integration is included.
+The Antigravity integration uses `agy` non-interactive print mode with sandboxing
+enabled. Compose makes the host executable available inside the container; when
+running `cli_api` directly on the host, it detects `agy` on the host PATH instead.
+Alternatively, stop the Compose API first to free its port and run the API locally:
+
+```bash
+docker compose stop cli-api
+.venv/bin/python -m uvicorn cli_api.app:app --host 127.0.0.1 --port 8088
+```
+
+For a custom integration, set `CLI_API_ANTIGRAVITY_COMMAND` in root `.env` to a
+JSON argv array. The command must read the prompt from stdin and write only the
+final answer to stdout, and must exist in the environment where the API runs.
+At least one provider CLI must be installed and available for completions; the
+other providers are optional. No GUI scraping, credential extraction, or private
+API integration is included.
 
 ## LangChain
 

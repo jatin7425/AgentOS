@@ -16,13 +16,25 @@ services:
         target: /host-auth/claude
         read_only: true
         bind:
-          create_host_path: false
+          create_host_path: true
       - type: bind
         source: ${CLI_CODEX_AUTH_DIR:-${HOME}/.codex}
         target: /host-auth/codex
         read_only: true
         bind:
-          create_host_path: false
+          create_host_path: true
+      - type: bind
+        source: ${CLI_API_ANTIGRAVITY_BINARY:-${HOME}/.local/bin/agy}
+        target: /usr/local/bin/agy
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: ${CLI_API_ANTIGRAVITY_AUTH_DIR:-${HOME}/.gemini/antigravity-cli}
+        target: /host-auth/antigravity
+        read_only: true
+        bind:
+          create_host_path: true
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8088/health', timeout=3)"]
       interval: 10s
